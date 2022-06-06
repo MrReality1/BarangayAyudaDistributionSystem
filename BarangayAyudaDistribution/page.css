@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+body{
+    min-height:100vh;
+}
+
+header{
+    position:fixed;
+    top:0; left:0; right:0;
+    background: #FF028D;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    padding:0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index:1000;
+}
+
+    header .navbar ul{
+    list-style:none;
+
+}
+
+    header .navbar ul li{
+    position:relative;
+    float:left;
+}
+
+header .navbar ul li a{
+    font-size:20px;
+    padding:20px;
+    color:#333;
+    display:block;
+}
+
+img{
+    height: auto;
+    padding: 6px;
+    float: left;
+    width: 100px;
+}
+
+#menu-bar{
+    display:none;
+}
+
+header label{
+    font-size:20px;
+    color: #333;
+    cursor: ponter;
+    display:none;
+}
+
+@media(max-width:991px){
+
+    header{
+        padding:20px;
+    }
+    header label{
+        display:initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0; 
+        background:#FF028D;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display:none;
+    }
+    header .navbar ul li{
+        width:100%
+    }
+    header .navbar ul li ul{
+        position:relative;
+        width:100%;
+    }
+    header .navbar ul li ul li{
+        background:#FF028D;
+
+    }
+    #menu-bar:checked ~ .navbar{
+        display:initial;
+    }
+}
+
+h1 span{
+    color:#fff;
+}
